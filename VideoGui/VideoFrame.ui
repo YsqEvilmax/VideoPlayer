@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoFrame</class>
+ <widget class="QWidget" name="VideoFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>742</width>
+    <height>38</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,0,0">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QPushButton" name="minimizePushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{	
+	
+	border-image: url(:/Frame/Frame/选择.png);
+}
+
+QPushButton:hover{
+	
+	
+	border-image: url(:/Frame/Frame/选择1.png);
+}
+
+QPushButton:pressed{
+	
+	border-image: url(:/Frame/Frame/选择1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="Resources/VideoGui.qrc">
+       <normaloff>:/Frame/Frame/缩小.png</normaloff>:/Frame/Frame/缩小.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="maximizePushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{	
+	
+	border-image: url(:/Frame/Frame/选择.png);
+}
+
+QPushButton:hover{
+	
+	
+	border-image: url(:/Frame/Frame/选择1.png);
+}
+
+QPushButton:pressed{
+	
+	border-image: url(:/Frame/Frame/选择1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="Resources/VideoGui.qrc">
+       <normaloff>:/Frame/Frame/放大.png</normaloff>
+       <normalon>:/Frame/Frame/放大1.png</normalon>
+       <disabledon>:/Frame/Frame/放大1.png</disabledon>
+       <activeon>:/Frame/Frame/放大1.png</activeon>
+       <selectedon>:/Frame/Frame/放大1.png</selectedon>:/Frame/Frame/放大.png</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="closePushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{	
+	
+	border-image: url(:/Frame/Frame/选择.png);
+}
+
+QPushButton:hover{
+	
+	
+	border-image: url(:/Frame/Frame/选择1.png);
+}
+
+QPushButton:pressed{
+	
+	border-image: url(:/Frame/Frame/选择1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="Resources/VideoGui.qrc">
+       <normaloff>:/Frame/Frame/关闭.png</normaloff>:/Frame/Frame/关闭.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Resources/VideoGui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>minimizePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFrame</receiver>
+   <slot>minimize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>686</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>687</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>maximizePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFrame</receiver>
+   <slot>maximize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>714</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>716</x>
+     <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFrame</receiver>
+   <slot>quit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>732</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>735</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>minimize()</slot>
+  <slot>maximize()</slot>
+  <slot>quit()</slot>
+ </slots>
+</ui>

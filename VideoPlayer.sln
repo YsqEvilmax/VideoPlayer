@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoGui", "VideoGui\VideoGui.vcxproj", "{65F05C17-6343-45EB-B624-4EE24DD015B9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F42721B-5D38-417C-BCCD-411E3037F06D} = {5F42721B-5D38-417C-BCCD-411E3037F06D}
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45} = {0640E76D-DB6C-45B4-86DB-4C1CF9522E45}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HikPlayer", "HikPlayer\HikPlayer.vcxproj", "{5F42721B-5D38-417C-BCCD-411E3037F06D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FYCameraDev", "FYCameraDev\FYCameraDev.vcxproj", "{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FYCameraMgr", "FYCameraMgr\FYCameraMgr.vcxproj", "{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7} = {E003D113-C3B3-4962-AC07-F81CDF0F7DD7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoDemo", "VideoDemo\VideoDemo.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{65F05C17-6343-45EB-B624-4EE24DD015B9} = {65F05C17-6343-45EB-B624-4EE24DD015B9}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Debug|Win32.Build.0 = Debug|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Debug|x64.ActiveCfg = Debug|x64
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Debug|x64.Build.0 = Debug|x64
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Release|Win32.ActiveCfg = Release|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Release|Win32.Build.0 = Release|Win32
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Release|x64.ActiveCfg = Release|x64
+		{65F05C17-6343-45EB-B624-4EE24DD015B9}.Release|x64.Build.0 = Release|x64
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Debug|Win32.Build.0 = Debug|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Debug|x64.ActiveCfg = Debug|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Release|Win32.ActiveCfg = Release|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Release|Win32.Build.0 = Release|Win32
+		{5F42721B-5D38-417C-BCCD-411E3037F06D}.Release|x64.ActiveCfg = Release|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Debug|Win32.Build.0 = Debug|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Debug|x64.ActiveCfg = Debug|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Release|Win32.ActiveCfg = Release|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Release|Win32.Build.0 = Release|Win32
+		{E003D113-C3B3-4962-AC07-F81CDF0F7DD7}.Release|x64.ActiveCfg = Release|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Debug|Win32.Build.0 = Debug|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Debug|x64.ActiveCfg = Debug|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Release|Win32.ActiveCfg = Release|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Release|Win32.Build.0 = Release|Win32
+		{0640E76D-DB6C-45B4-86DB-4C1CF9522E45}.Release|x64.ActiveCfg = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|Win32.Build.0 = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.ActiveCfg = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|Win32.ActiveCfg = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|Win32.Build.0 = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = msvc2013_opengl
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,2981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoDisplay</class>
+ <widget class="QWidget" name="VideoDisplay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>888</width>
+    <height>566</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoDisplay</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,1">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="showWidget" native="true">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/Backgroud/Backgroud/屏幕尺寸.png);</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QStackedWidget" name="controlStackedWidget">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QStatckedWidget#controlStackedWidget{
+	background-color:transparent;
+}
+
+</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="PTZControllerWidget">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#PTZControllerWidget{
+	background-color:transparent;
+}</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout" rowstretch="1,3,1" columnstretch="1,3,1">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="Gui::EmergingButton" name="leftupPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/左上 (2).png</normaloff>:/PTZ/PTZ/左上 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="Gui::EmergingButton" name="upPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/上 (2).png</normaloff>:/PTZ/PTZ/上 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="Gui::EmergingButton" name="rightupPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/右上 (2).png</normaloff>:/PTZ/PTZ/右上 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Gui::EmergingButton" name="leftPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/左 (2).png</normaloff>:/PTZ/PTZ/左 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="Gui::EmergingButton" name="circlePushButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border-image: url(:/PTZ/PTZ/123.png);
+	background-color:transparent;
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>177</width>
+              <height>158</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="Gui::EmergingButton" name="rightPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/右 (2).png</normaloff>:/PTZ/PTZ/右 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="Gui::EmergingButton" name="leftdownpushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/左下 (2).png</normaloff>:/PTZ/PTZ/左下 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="Gui::EmergingButton" name="downPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/下 (2).png</normaloff>:/PTZ/PTZ/下 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="Gui::EmergingButton" name="rightdownPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/PTZ/PTZ/右下 (2).png</normaloff>:/PTZ/PTZ/右下 (2).png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="playControllerWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>212</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="Gui::EmergingWidget" name="palyWidget" native="true">
+            <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1" columnstretch="1,2,1,2,1,2,1,2,1,2,1">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="1" column="10">
+              <widget class="QPushButton" name="tomorrowPushButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	border: 5px;
+	border-image: url(:/PlayController/PlayController/左移1.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/PlayController/PlayController/左移2.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="Resources/VideoGui.qrc">
+                 <normaloff>:/PlayController/PlayController/2.png</normaloff>:/PlayController/PlayController/2.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <widget class="QPushButton" name="playOrPausePushButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	border: 10px;
+	border-image: url(:/PlayController/PlayController/停止1.png);
+}
+
+QPushButton: pressed{
+	border-image: url(:/PlayController/PlayController/停止2.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="Resources/VideoGui.qrc">
+                 <normaloff>:/PlayController/PlayController/播放.png</normaloff>:/PlayController/PlayController/播放.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>46</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="2">
+              <widget class="QPushButton" name="stopPushButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	border: 10px;
+	border-image: url(:/PlayController/PlayController/停止1.png);
+}
+
+QPushButton: pressed{
+	border-image: url(:/PlayController/PlayController/停止2.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="Resources/VideoGui.qrc">
+                 <normaloff>:/PlayController/PlayController/停止.png</normaloff>:/PlayController/PlayController/停止.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="5">
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>45</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="4">
+              <widget class="QPushButton" name="lastPushButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	border: 10px;
+	border-image: url(:/PlayController/PlayController/快进1.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/PlayController/PlayController/快进2.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="Resources/VideoGui.qrc">
+                 <normaloff>:/PlayController/PlayController/快进.png</normaloff>:/PlayController/PlayController/快进.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="10">
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>72</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="yesterdayPushButton">
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	border: 5px;
+	border-image: url(:/PlayController/PlayController/左移1.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/PlayController/PlayController/左移2.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="Resources/VideoGui.qrc">
+                 <normaloff>:/PlayController/PlayController/1.png</normaloff>:/PlayController/PlayController/1.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="8">
+              <widget class="QPushButton" name="nextPushButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	border: 10px;
+	border-image: url(:/PlayController/PlayController/快进1.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/PlayController/PlayController/快进2.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="Resources/VideoGui.qrc">
+                 <normaloff>:/PlayController/PlayController/快退.png</normaloff>:/PlayController/PlayController/快退.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="7">
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>46</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>72</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="1">
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="9">
+              <spacer name="horizontalSpacer_11">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="1" colspan="9">
+              <widget class="QSlider" name="todayHorizontalSlider">
+               <property name="styleSheet">
+                <string notr="true">QSlider::handle:horizontal {
+	border-image: url(:/PlayController/PlayController/选择.png);
+ }
+
+ QSlider::handle:pressed {
+	
+	border-image: url(:/PlayController/PlayController/选择.png);
+ }</string>
+               </property>
+               <property name="maximum">
+                <number>24</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="tickPosition">
+                <enum>QSlider::TicksAbove</enum>
+               </property>
+               <property name="tickInterval">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="panelWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/Backgroud/Backgroud/di2.png);</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="videoGroupBox">
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/Backgroud/Backgroud/底板.png);</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1">
+         <property name="spacing">
+          <number>9</number>
+         </property>
+         <property name="leftMargin">
+          <number>16</number>
+         </property>
+         <property name="topMargin">
+          <number>9</number>
+         </property>
+         <property name="rightMargin">
+          <number>16</number>
+         </property>
+         <property name="bottomMargin">
+          <number>9</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="realtimeVideoPushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{	
+	border-image: url(:/Button/Button/2.png);
+}
+
+QPushButton:hover{
+	
+	border-image: url(:/Button/Button/3.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/1.png);
+}</string>
+           </property>
+           <property name="text">
+            <string>实时视频</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="historicVideoPushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{	
+	border-image: url(:/Button/Button/2.png);
+}
+
+QPushButton:hover{
+	
+	border-image: url(:/Button/Button/3.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/1.png);
+}</string>
+           </property>
+           <property name="text">
+            <string>历史视频</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="panelGroupBox">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QStackedWidget" name="panelStackedWidget">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="page">
+            <layout class="QVBoxLayout" name="verticalLayout_6" stretch="3,1,3,3">
+             <item>
+              <widget class="QWidget" name="panWidget" native="true">
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Backgroud/Backgroud/控件底板.png);</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>9</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>9</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="leftupPushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/左上.png</normaloff>:/PTZ/PTZ/左上.png</iconset>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="upPushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/上.png</normaloff>:/PTZ/PTZ/上.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="rightupPushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/右上.png</normaloff>:/PTZ/PTZ/右上.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="leftPushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/左.png</normaloff>:/PTZ/PTZ/左.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="circlePushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/刷新.png</normaloff>:/PTZ/PTZ/刷新.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="rightPushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/右.png</normaloff>:/PTZ/PTZ/右.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="leftdownPushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/左下.png</normaloff>:/PTZ/PTZ/左下.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="downPushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/下.png</normaloff>:/PTZ/PTZ/下.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="rightdownPushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/右下.png</normaloff>:/PTZ/PTZ/右下.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="speedWidget" native="true">
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Backgroud/Backgroud/底！.png);</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,8,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="decreasePushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/-hao.png</normaloff>:/PTZ/PTZ/-hao.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="speedHorizontalSlider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QSlider{
+	border-image: url(:/Backgroud/Backgroud/底！.png);
+}
+QSlider::groove:horizontal {
+     border: 1px solid #999999;
+	 height: 3px; /* the groove expands to the size of the 		 slider by default. by giving it a height, it has a 		 fixed size */
+     background: white;
+ }
+ 
+ QSlider::handle:horizontal {
+	border-image: url(:/PTZ/PTZ/滑动.png);
+     width: 10px;
+     margin: -5px 0;
+ }
+
+ QSlider::handle:pressed {
+	border-image: url(:/PTZ/PTZ/滑动2.png);
+ }
+
+ QSlider::add-page:horizontal {
+     background: rgb(223, 220, 245);
+ }
+ 
+ QSlider::sub-page:horizontal {
+     background: rgb(107, 147, 255);
+ }</string>
+                  </property>
+                  <property name="maximum">
+                   <number>10</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="increasePushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/+hao.png</normaloff>:/PTZ/PTZ/+hao.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="cameraWidget" native="true">
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Backgroud/Backgroud/控件底板.png);</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>9</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>9</number>
+                </property>
+                <item row="0" column="5">
+                 <widget class="QPushButton" name="zoomInPushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/+.png</normaloff>:/PTZ/PTZ/+.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="focusFarPushButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/-.png</normaloff>:/PTZ/PTZ/-.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="zoomOutPushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/-.png</normaloff>:/PTZ/PTZ/-.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QLabel" name="tiltLabel">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="Resources/VideoGui.qrc">:/PTZ/PTZ/放大镜.png</pixmap>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="5">
+                 <widget class="QPushButton" name="focusNearPushButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/+.png</normaloff>:/PTZ/PTZ/+.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QLabel" name="zoomLabel">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="Resources/VideoGui.qrc">:/PTZ/PTZ/山.png</pixmap>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="irisClosePushButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/-.png</normaloff>:/PTZ/PTZ/-.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QLabel" name="apertureLabel">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="Resources/VideoGui.qrc">:/PTZ/PTZ/花.png</pixmap>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="5">
+                 <widget class="QPushButton" name="irisOpenPushButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+     border-image: url(:/Button/Button/2.png);
+	 height: 30px;
+	 width: 40px;
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/PTZ/PTZ/+.png</normaloff>:/PTZ/PTZ/+.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="6">
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="2">
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0">
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="4">
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="colourWidget" native="true">
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Backgroud/Backgroud/底！.png);</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_4" rowstretch="2,2,2,2,1">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <property name="spacing">
+                 <number>6</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="brightnessLabel">
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="Resources/VideoGui.qrc">:/ColourSpace/ColorSpace/icon.png</pixmap>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QSlider" name="brightnessHorizontalSlider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QSlider{
+	border-image: url(:/Backgroud/Backgroud/底！.png);
+}
+
+QSlider::groove:horizontal {
+     border: 1px solid #999999;
+	 height: 3px; /* the groove expands to the size of the 		 slider by default. by giving it a height, it has a 		 fixed size */
+     background: white;
+ }
+ 
+ QSlider::handle:horizontal {
+	border-image: url(:/PTZ/PTZ/滑动.png);
+     width: 10px;
+     margin: -5px 0;
+ }
+
+ QSlider::handle:pressed {
+	border-image: url(:/PTZ/PTZ/滑动2.png);
+ }
+
+ QSlider::add-page:horizontal {
+     background: rgb(223, 220, 245);
+ }
+ 
+ QSlider::sub-page:horizontal {
+     background: rgb(107, 147, 255);
+ }</string>
+                  </property>
+                  <property name="minimum">
+                   <number>-255</number>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="hueLabel">
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Plain</enum>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="Resources/VideoGui.qrc">:/ColourSpace/ColorSpace/icon.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QSlider" name="hueHorizontalSlider">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::groove:horizontal {
+     border: 1px solid #999999;
+	 height: 3px; /* the groove expands to the size of the 		 slider by default. by giving it a height, it has a 		 fixed size */
+     background: white;
+ }
+ 
+ QSlider::handle:horizontal {
+	border-image: url(:/PTZ/PTZ/滑动.png);
+     width: 10px;
+     margin: -5px 0;
+ }
+
+ QSlider::handle:pressed {
+	border-image: url(:/PTZ/PTZ/滑动2.png);
+ }
+
+ QSlider::add-page:horizontal {
+     background: rgb(223, 220, 245);
+ }
+ 
+ QSlider::sub-page:horizontal {
+     background: rgb(107, 147, 255);
+ }</string>
+                  </property>
+                  <property name="minimum">
+                   <number>-255</number>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QSlider" name="contrastHorizontalSlider">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::groove:horizontal {
+     border: 1px solid #999999;
+	 height: 3px; /* the groove expands to the size of the 		 slider by default. by giving it a height, it has a 		 fixed size */
+     background: white;
+ }
+ 
+ QSlider::handle:horizontal {
+	border-image: url(:/PTZ/PTZ/滑动.png);
+     width: 10px;
+     margin: -5px 0;
+ }
+
+ QSlider::handle:pressed {
+	border-image: url(:/PTZ/PTZ/滑动2.png);
+ }
+
+ QSlider::add-page:horizontal {
+     background: rgb(223, 220, 245);
+ }
+ 
+ QSlider::sub-page:horizontal {
+     background: rgb(107, 147, 255);
+ }</string>
+                  </property>
+                  <property name="minimum">
+                   <number>-255</number>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QSlider" name="saturationHorizontalSlider">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::groove:horizontal {
+     border: 1px solid #999999;
+	 height: 3px; /* the groove expands to the size of the 		 slider by default. by giving it a height, it has a 		 fixed size */
+     background: white;
+ }
+ 
+ QSlider::handle:horizontal {
+	border-image: url(:/PTZ/PTZ/滑动.png);
+     width: 10px;
+     margin: -5px 0;
+ }
+
+ QSlider::handle:pressed {
+	border-image: url(:/PTZ/PTZ/滑动2.png);
+ }
+
+ QSlider::add-page:horizontal {
+     background: rgb(223, 220, 245);
+ }
+ 
+ QSlider::sub-page:horizontal {
+     background: rgb(107, 147, 255);
+ }</string>
+                  </property>
+                  <property name="minimum">
+                   <number>-255</number>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0" colspan="2">
+                 <widget class="QPushButton" name="defaultValuePushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{	
+    border: 10px;
+	border-image: url(:/Button/Button/2.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>恢复默认值</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="contrastLabel">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="Resources/VideoGui.qrc">:/ColourSpace/ColorSpace/icon.png</pixmap>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="saturationLabel">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="Resources/VideoGui.qrc">:/ColourSpace/ColorSpace/icon.png</pixmap>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <layout class="QVBoxLayout" name="verticalLayout_8" stretch="8,2,10">
+             <item>
+              <widget class="QCalendarWidget" name="calendarWidget">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">selection-color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
+selection-background-color: rgb(38, 116, 0);
+alternate-background-color: rgb(134, 134, 134);</string>
+               </property>
+               <property name="gridVisible">
+                <bool>false</bool>
+               </property>
+               <property name="horizontalHeaderFormat">
+                <enum>QCalendarWidget::ShortDayNames</enum>
+               </property>
+               <property name="verticalHeaderFormat">
+                <enum>QCalendarWidget::NoVerticalHeader</enum>
+               </property>
+               <property name="navigationBarVisible">
+                <bool>true</bool>
+               </property>
+               <property name="dateEditEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="durationWidget" native="true">
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Calendar/Calendar/日期底框.png);</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_6" rowstretch="0,0" columnstretch="1,3">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <property name="horizontalSpacing">
+                 <number>9</number>
+                </property>
+                <property name="verticalSpacing">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="fromLabel">
+                  <property name="text">
+                   <string>从</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QTimeEdit" name="fromTimeEdit">
+                  <property name="styleSheet">
+                   <string notr="true">border-image: url(:/Calendar/Calendar/日历底框文字区.png);</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="toLabel">
+                  <property name="text">
+                   <string>到</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QTimeEdit" name="toTimeEdit">
+                  <property name="styleSheet">
+                   <string notr="true">border-image: url(:/Calendar/Calendar/日历底框文字区.png);</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="time">
+                   <time>
+                    <hour>23</hour>
+                    <minute>59</minute>
+                    <second>59</second>
+                   </time>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="resultWidget" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,8">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="searchPushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{	
+	border-image: url(:/Button/Button/2.png);
+}
+
+QPushButton:pressed{
+	border-image: url(:/Button/Button/3.png);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>查询</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="resultListWidget">
+                  <property name="styleSheet">
+                   <string notr="true">border-image: url(:/Backgroud/Backgroud/查询结果底板.png);</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Gui::EmergingButton</class>
+   <extends>QPushButton</extends>
+   <header>Emerging.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Gui::EmergingWidget</class>
+   <extends>QWidget</extends>
+   <header>Emerging.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Resources/VideoGui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>realtimeVideoPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>changeToRealtime()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>847</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>541</x>
+     <y>30</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>historicVideoPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>changeToHistoric()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>847</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>541</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playOrPausePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>playOrPause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftPushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>186</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>623</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightPushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>842</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downPushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>downBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>753</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>713</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upPushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>upBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>753</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>730</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftupPushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftupBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>636</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftdownPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftdownBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightupPushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightupBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>824</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightdownPushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightdownBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>800</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>upBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>287</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>downBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>377</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftupPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftupBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>51</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftdownpushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftdownBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>387</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>134</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightupPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightupBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>476</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightdownPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightdownBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>435</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftPushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>186</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftupPushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftupEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>518</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftdownPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftdownEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>657</x>
+     <y>527</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downPushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>downEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>753</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>694</x>
+     <y>518</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upPushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>upEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>753</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>722</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightPushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>769</x>
+     <y>527</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightdownPushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightdownEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>786</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightupPushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightupEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>828</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftupPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftupEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>26</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>557</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>312</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>71</x>
+     <y>545</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftdownpushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>leftdownEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>468</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>562</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>upEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>downEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>334</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>601</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightupPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightupEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>144</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>578</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>498</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightdownPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>rightdownEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>550</x>
+     <y>453</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>548</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>queryRecordVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>752</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>694</x>
+     <y>569</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resultListWidget</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>playRecordVideo(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>752</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>656</x>
+     <y>580</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomOutPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>zoomOutBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>726</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>596</x>
+     <y>556</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomOutPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>zoomOutEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>726</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>613</x>
+     <y>534</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomInPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>zoomInBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>853</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>827</x>
+     <y>545</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomInPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>zoomInEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>853</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>825</x>
+     <y>581</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>focusFarPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>focusFarBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>726</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>621</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>focusFarPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>focusFarEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>726</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>625</x>
+     <y>594</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>focusNearPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>focusNearBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>853</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>811</x>
+     <y>572</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>focusNearPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>focusNearEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>853</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>810</x>
+     <y>561</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>irisClosePushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>irisCloseBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>726</x>
+     <y>408</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>642</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>irisClosePushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>irisCloseEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>726</x>
+     <y>408</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>644</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>irisOpenPushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>irisOpenBegin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>853</x>
+     <y>408</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>772</x>
+     <y>557</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>irisOpenPushButton</sender>
+   <signal>released()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>irisOpenEnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>853</x>
+     <y>408</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>787</x>
+     <y>610</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>speedHorizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>speedChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>856</x>
+     <y>285</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>705</x>
+     <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>brightnessHorizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>brightnessChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>878</x>
+     <y>447</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>671</x>
+     <y>597</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hueHorizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>hueChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>878</x>
+     <y>476</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>687</x>
+     <y>630</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>contrastHorizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>contrastChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>878</x>
+     <y>505</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>698</x>
+     <y>640</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saturationHorizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>saturationChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>878</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>722</x>
+     <y>585</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>defaultValuePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>returnDefault()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>878</x>
+     <y>554</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>745</x>
+     <y>608</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stopPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>stop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>537</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lastPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>last()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>559</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nextPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>next()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>603</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>529</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>yesterdayPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>slow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>44</x>
+     <y>586</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tomorrowPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>fast()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>646</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>532</x>
+     <y>575</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>decreasePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>speedDecrease()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>674</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>increasePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>speedIncrease()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>870</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>874</x>
+     <y>603</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>changeToRealtime()</slot>
+  <slot>changeToHistoric()</slot>
+  <slot>playOrPause()</slot>
+  <slot>leftBegin()</slot>
+  <slot>rightBegin()</slot>
+  <slot>downBegin()</slot>
+  <slot>upBegin()</slot>
+  <slot>leftupBegin()</slot>
+  <slot>leftdownBegin()</slot>
+  <slot>rightupBegin()</slot>
+  <slot>rightdownBegin()</slot>
+  <slot>leftEnd()</slot>
+  <slot>rightEnd()</slot>
+  <slot>upEnd()</slot>
+  <slot>downEnd()</slot>
+  <slot>leftupEnd()</slot>
+  <slot>leftdownEnd()</slot>
+  <slot>rightupEnd()</slot>
+  <slot>rightdownEnd()</slot>
+  <slot>queryRecordVideo()</slot>
+  <slot>playRecordVideo(QListWidgetItem*)</slot>
+  <slot>zoomOutBegin()</slot>
+  <slot>zoomOutEnd()</slot>
+  <slot>zoomInBegin()</slot>
+  <slot>zoomInEnd()</slot>
+  <slot>focusFarBegin()</slot>
+  <slot>focusFarEnd()</slot>
+  <slot>focusNearBegin()</slot>
+  <slot>focusNearEnd()</slot>
+  <slot>irisCloseBegin()</slot>
+  <slot>irisCloseEnd()</slot>
+  <slot>irisOpenBegin()</slot>
+  <slot>irisOpenEnd()</slot>
+  <slot>speedChange(int)</slot>
+  <slot>brightnessChange(int)</slot>
+  <slot>contrastChange(int)</slot>
+  <slot>hueChange(int)</slot>
+  <slot>saturationChange(int)</slot>
+  <slot>returnDefault()</slot>
+  <slot>stop()</slot>
+  <slot>last()</slot>
+  <slot>next()</slot>
+  <slot>slow()</slot>
+  <slot>fast()</slot>
+  <slot>speedIncrease()</slot>
+  <slot>speedDecrease()</slot>
+ </slots>
+</ui>

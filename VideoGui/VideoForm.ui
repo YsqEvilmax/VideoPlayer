@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoForm</class>
+ <widget class="QWidget" name="VideoForm">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>832</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoForm</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,20">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="Gui::VideoFrame" name="frameWidget" native="true">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/Frame/Frame/窗口条_中.png);</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Gui::VideoDisplay" name="displayWidget" native="true">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/Backgroud/Backgroud/屏幕尺寸.png);</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Gui::VideoFrame</class>
+   <extends>QWidget</extends>
+   <header>VideoFrame.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Gui::VideoDisplay</class>
+   <extends>QWidget</extends>
+   <header>VideoDisplay.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Resources/VideoGui.qrc"/>
+ </resources>
+ <connections/>
+</ui>

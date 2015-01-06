@@ -1,0 +1,94 @@
+<RCC>
+  <qresource prefix="PTZ">
+    <file>PTZ/123.png</file>
+    <file>PTZ/上 (2).png</file>
+    <file>PTZ/上_选中.png</file>
+    <file>PTZ/下 (2).png</file>
+    <file>PTZ/下_选中.png</file>
+    <file>PTZ/右 (2).png</file>
+    <file>PTZ/右_选中.png</file>
+    <file>PTZ/右上 (2).png</file>
+    <file>PTZ/右上_选中.png</file>
+    <file>PTZ/右下 (2).png</file>
+    <file>PTZ/右下_选中.png</file>
+    <file>PTZ/左 (2).png</file>
+    <file>PTZ/左_选中.png</file>
+    <file>PTZ/左上 (2).png</file>
+    <file>PTZ/左上_选中.png</file>
+    <file>PTZ/左下 (2).png</file>
+    <file>PTZ/左下_选中.png</file>
+    <file>PTZ/+hao.png</file>
+    <file>PTZ/-hao.png</file>
+    <file>PTZ/滑动.png</file>
+    <file>PTZ/滑动2.png</file>
+    <file>PTZ/放大镜.png</file>
+    <file>PTZ/花.png</file>
+    <file>PTZ/山.png</file>
+    <file>PTZ/-.png</file>
+    <file>PTZ/+.png</file>
+    <file>PTZ/上.png</file>
+    <file>PTZ/刷新.png</file>
+    <file>PTZ/下.png</file>
+    <file>PTZ/右.png</file>
+    <file>PTZ/右上.png</file>
+    <file>PTZ/右下.png</file>
+    <file>PTZ/左.png</file>
+    <file>PTZ/左上.png</file>
+    <file>PTZ/左下.png</file>
+  </qresource>
+  <qresource prefix="Frame">
+    <file>Frame/窗口条_右.png</file>
+    <file>Frame/窗口条_中.png</file>
+    <file>Frame/窗口条_左.png</file>
+    <file>Frame/放大.png</file>
+    <file>Frame/放大1.png</file>
+    <file>Frame/关闭.png</file>
+    <file>Frame/关闭1.png</file>
+    <file>Frame/缩小.png</file>
+    <file>Frame/缩小1.png</file>
+    <file>Frame/选择.png</file>
+    <file>Frame/选择1.png</file>
+  </qresource>
+  <qresource prefix="Calendar">
+    <file>Calendar/日历选中.png</file>
+    <file>Calendar/日历大地板.png</file>
+    <file>Calendar/日历底板.png</file>
+    <file>Calendar/日历底框文字区.png</file>
+    <file>Calendar/日历顶.png</file>
+    <file>Calendar/日期底框.png</file>
+    <file>Calendar/星期拦.png</file>
+  </qresource>
+  <qresource prefix="Backgroud">
+    <file>Backgroud/屏幕尺寸.png</file>
+    <file>Backgroud/查询结果底板.png</file>
+    <file>Backgroud/di.png</file>
+    <file>Backgroud/di2.png</file>
+    <file>Backgroud/控件底板.png</file>
+    <file>Backgroud/底！.png</file>
+    <file>Backgroud/底板.png</file>
+  </qresource>
+  <qresource prefix="Button">
+    <file>Button/1.png</file>
+    <file>Button/2.png</file>
+    <file>Button/3.png</file>
+    <file>Button/4.png</file>
+  </qresource>
+  <qresource prefix="ColourSpace">
+    <file>ColorSpace/icon.png</file>
+  </qresource>
+  <qresource prefix="PlayController">
+    <file>PlayController/1.png</file>
+    <file>PlayController/2.png</file>
+    <file>PlayController/播放.png</file>
+    <file>PlayController/快进.png</file>
+    <file>PlayController/快进1.png</file>
+    <file>PlayController/快进2.png</file>
+    <file>PlayController/快退.png</file>
+    <file>PlayController/停止.png</file>
+    <file>PlayController/停止1.png</file>
+    <file>PlayController/停止2.png</file>
+    <file>PlayController/选择.png</file>
+    <file>PlayController/左移1.png</file>
+    <file>PlayController/左移2.png</file>
+  </qresource>
+</RCC>

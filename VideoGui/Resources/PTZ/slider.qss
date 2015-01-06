@@ -1,0 +1,23 @@
+QSlider::groove:horizontal {
+     border: 1px solid #999999;
+	 height: 3px; /* the groove expands to the size of the 		 slider by default. by giving it a height, it has a 		 fixed size */
+     background: white;
+ }
+ 
+ QSlider::handle:horizontal {
+	border-image: url(:/PTZ/PTZ/»¬¶¯.png);
+     width: 10px;
+     margin: -5px 0;
+ }
+
+ QSlider::handle:pressed {
+	border-image: url(:/PTZ/PTZ/»¬¶¯2.png);
+ }
+
+ QSlider::add-page:horizontal {
+     background: rgb(223, 220, 245);
+ }
+ 
+ QSlider::sub-page:horizontal {
+     background: rgb(107, 147, 255);
+ }
